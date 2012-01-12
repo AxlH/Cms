@@ -1,0 +1,17 @@
+<?php
+
+class Initializer {
+    
+    public static function load($path){
+        if(folder_exists($path)){
+            foreach(glob($path."*.core.php") as $file){
+                include $file;
+            }
+        }
+    }
+    
+    //TODO: add some checks for classes
+    
+}
+
+?>
